@@ -9,7 +9,6 @@ def extract_prot_name(path):
         #protein=(record.description).split("[Trypanosoma cruzi]")
         if "RecName: Full=" in record.description:
             prot=(record.description).split(";")
-            print record.organisum
             protname=prot[0].lstrip("RecName: Full=")
             protls.append(protname)
         elif "[Trypanosoma cruzi strain CL Brener]" in record.description:
